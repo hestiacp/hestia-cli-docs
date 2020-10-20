@@ -22,10 +22,7 @@ Hint: command short descriptions are displayed on hover
 
 
 {% for cmdName, cmd in cmds %}
-### {{ cmdName }}
-{% if cmd.labels.length %}
-{% for label in cmd.labels %}`{{ '{' + (label | mdCode) + '}' }}` {% endfor %}
-{% endif %}
+### {{ cmdName }} {% for label in cmd.labels %}`{{ '{' + (label | mdCode) + '}' }}` {% endfor %}
 
 {% if cmd.info %}
 *{{ cmd.info | md }}*

@@ -22,7 +22,7 @@ npm i
 
 ### Generate command annotations
 
-Auto-format comments in Hestia commands, label ones that are unique to Hestia, merge examples and categories from Hestia older documentation:
+Auto-format comments in Hestia commands, label ones that are unique to Hestia, merge examples and categories from Hestia older documentation. This may be destructive for a branch that has been already edited:
 
 ```
 npm run format-cmds -- --legacy path/to/local/hestiacp/bin https://github.com/hestiacp/hestiacp branch-that-contains-unformatted-comments
@@ -38,10 +38,10 @@ npm run format-cmds -- path/to/local/hestiacp/bin https://github.com/hestiacp/he
 
 ### Check command annotations
 
-Check comments in Hestia commands for potential problems, merge data from Hestia older documentation and output hestia-cmds.json cache that can be used by other commands or externally processed:
+Check comments in Hestia commands for potential problems and output hestia-cmds.json cache that can be used by other commands or externally processed:
 
 ```
-npm run check-cmds -- --legacy --output https://github.com/hestiacp/hestiacp branch-that-contains-unformatted-comments
+npm run check-cmds -- --output https://github.com/hestiacp/hestiacp branch-that-contains-unformatted-comments
 ```
 
 ### Generate CLI documentation

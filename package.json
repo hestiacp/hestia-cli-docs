@@ -1,0 +1,22 @@
+{
+  "name": "hestia-cli-docs",
+  "version": "1.0.0",
+  "description": "Generate and process Hestia CLI documentation from annotation comments",
+  "author": "bisubus",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "check-cmds": "bin/check-cmds.js",
+    "generate-docs": "bin/generate-docs.js",
+    "format-cmds": "bin/format-cmds.js"
+  },
+  "scripts": {
+    "check-cmds": "node bin/check-cmds.js",
+    "generate-docs": "node bin/generate-docs.js",
+    "format-cmds": "node bin/format-cmds.js"
+  },
+  "dependencies": {
+    "gfm-escape": "~0.2.0",
+    "nunjucks": "~3.2.2"
+  }
+}

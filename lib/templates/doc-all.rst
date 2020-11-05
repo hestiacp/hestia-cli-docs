@@ -16,12 +16,12 @@
 
 .. code-block:: {{ 'php' if cmd.php else 'bash' }}
    
-   {{ example | mdCode }}
-
+   {{ example.replace('#','\n\n#') }}
+   
 {% endfor %}
 {% endif %}
 
-{{ cmd.desc  }}
+{{ cmd.desc.replace('*','`*`')  }}
 
 
 {% endfor %}

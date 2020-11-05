@@ -1,26 +1,3 @@
-# Hestia CLI Documentation
-
-## Labels
-
-Hint: use Ctrl+F to find them on page
-
-- `{hestia}`: commands that are unique to Hestia and not inherited from Vesta
-- `{panel}`: panel-specific commands
-- `{dns}`: DNS-specific commands
-- `{mail}`: mail-specific commands
-
-## Contents
-
-Hint: command short descriptions are displayed on hover
-
-{% for cmdName, cmd in cmds %}
-- [{{ cmdName }}](#{{ cmdName }} "{{ cmd.info | mdLinkTitle }}") {% for label in cmd.labels %}`{{ '{' + (label | mdCode) + '}' }}` {% endfor %}
-
-{% endfor %}
-
-## Commands
-
-
 {% for cmdName, cmd in cmds %}
 ### {{ cmdName }} {% for label in cmd.labels %}`{{ '{' + (label | mdCode) + '}' }}` {% endfor %}
 

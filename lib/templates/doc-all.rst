@@ -16,7 +16,7 @@
 
 .. code-block:: {{ 'php' if cmd.php else 'bash' }}
    
-   {{ example.replace('#','\n\n#') }}
+  {{ example }}
    
 {% endfor %}
 {% endif %}

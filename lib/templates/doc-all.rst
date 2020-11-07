@@ -1,11 +1,14 @@
 {% for cmdName, cmd in cmds %}
 *******************************************************************
-{{ cmdName }} {% for label in cmd.labels %} {{  '`{'+(label | mdCode)+'}`'  }} {% endfor %} 
+{{ cmdName }}
 *******************************************************************
 
 {% if cmd.info %}
 **{{ cmd.info }}**
 {% endif %}
+
+**Label**:  {% for label in cmd.labels %} {{  '`'+(label | mdCode)+'`'  }} {% endfor %}
+
 
 **Options**: {% for option in cmd.options %}{{ '–' if (option === 'NONE') else ('`' + (option | mdCode) + '`') }} {% endfor %}
 

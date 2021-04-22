@@ -107,3 +107,6 @@ dist
 
 # Nova
 .nova
+
+# Exclude docs as they are always outdated see https://docs.hestiacp.com instead
+/docs/*

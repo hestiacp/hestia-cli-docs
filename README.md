@@ -13,7 +13,7 @@ If you are here to browse it, you don't need any of the below.
 Supports Node.js 14 or higher.
 
 ```
-git clone https://github.com/bisubus/hestia-cli-docs
+git clone https://github.com/hestiacp/hestia-cli-docs
 cd hestia-cli-docs
 npm i
 ```

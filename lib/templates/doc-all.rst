@@ -7,11 +7,7 @@
 **{{ cmd.info }}**
 {% endif %}
 
-**Label**:  {% for label in cmd.labels %} {{  '`'+(label | mdCode)+'`'  }} {% endfor %}
-
-
-**Options**: {% for option in cmd.options %}{{ '–' if (option === 'NONE') else ('`' + (option | mdCode) + '`') }} {% endfor %}
-
+**Options**: {% for option in cmd.options %}{{ 'none' if (option === 'NONE') else ('`' + (option | mdCode) + '`') }} {% endfor %}
 
 {% if cmd.examples.length %}
 **Examples**:
@@ -24,7 +20,6 @@
 {% endfor %}
 {% endif %}
 
-{{ cmd.desc.replace('*','`*`')  }}
-
+{{ cmd.desc  }}
 
 {% endfor %}

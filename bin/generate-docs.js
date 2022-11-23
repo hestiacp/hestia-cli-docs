@@ -10,4 +10,4 @@ const [hestiaRepo = 'https://github.com/hestiacp/hestiacp', hestiaBranch = 'main
 const cmds = processCmds({ hestiaRepo, hestiaBranch, cache: true, checkOldDocs: false, checkVesta:false });
 const allCmdsDoc = generateAllCmdsDoc(cmds);
 
-fs.writeFileSync(path.join(__dirname, '../docs/commands.rst'), allCmdsDoc, 'utf8');
+fs.writeFileSync(path.join(__dirname, '../docs/commands.md'), allCmdsDoc, 'utf8');

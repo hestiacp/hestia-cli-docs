@@ -7,19 +7,19 @@
 **{{ cmd.info }}**
 {% endif %}
 
-**Options**: {% for option in cmd.options %}{{ 'none' if (option === 'NONE') else ('`' + (option | mdCode) + '`') }} {% endfor %}
+**Options**: {% for option in cmd.options %}{{ '–' if (option === 'NONE') else ('`' + (option | mdCode) + '`') }} {% endfor %}
 
 {% if cmd.examples.length %}
 **Examples**:
 {% for example in cmd.examples %}
 
-.. code-block:: {{ 'php' if cmd.php else 'bash' }}
+ {{ 'php' if cmd.php else 'bash' }}
    
   {{ example }}
    
 {% endfor %}
 {% endif %}
 
-{{ cmd.desc  }}
+{{ cmd.desc }}
 
 {% endfor %}

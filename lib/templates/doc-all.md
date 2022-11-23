@@ -1,22 +1,24 @@
+# CLI Reference
+
 {% for cmdName, cmd in cmds %}
-### {{ cmdName }} {% for label in cmd.labels %}`{{ '{' + (label | mdCode) + '}' }}` {% endfor %}
+## {{ cmdName }}
 
 {% if cmd.info %}
-*{{ cmd.info | md }}*
+{{ cmd.info }}
 {% endif %}
 
 **Options**: {% for option in cmd.options %}{{ '–' if (option === 'NONE') else ('`' + (option | mdCode) + '`') }} {% endfor %}
 
-
 {% if cmd.examples.length %}
+
 **Examples**:
-{% for example in cmd.examples %}
 ```{{ 'php' if cmd.php else 'bash' }}
-{{ example | mdCode }}
-```
+{% for example in cmd.examples %}
+    {{ example }}
 {% endfor %}
+```
 {% endif %}
 
-{{ cmd.desc | md }}
+{{ cmd.desc }}
 
 {% endfor %}

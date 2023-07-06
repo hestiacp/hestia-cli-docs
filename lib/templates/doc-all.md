@@ -12,6 +12,7 @@
 {% if cmd.examples.length %}
 
 **Examples**:
+
 ```{{ 'php' if cmd.php else 'bash' }}
 {% for example in cmd.examples %}
     {{ example }}

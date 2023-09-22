@@ -3,6 +3,8 @@
 {% for cmdName, cmd in cmds %}
 ## {{ cmdName }}
 
+[Source](https://github.com/hestiacp/hestiacp/blob/release/bin/{{cmdName}})
+
 {% if cmd.info %}
 {{ cmd.info }}
 {% endif %}
@@ -15,7 +17,7 @@
 
 ```{{ 'php' if cmd.php else 'bash' }}
 {% for example in cmd.examples %}
-    {{ example }}
+{{ example }}
 {% endfor %}
 ```
 {% endif %}

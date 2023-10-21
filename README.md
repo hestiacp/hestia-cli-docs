@@ -4,7 +4,7 @@ Provides pre-generated Hestia CLI documentation, as well as tools to generate it
 
 ## Documentation
 
-**Ready-to-use documentation for Hestia CLI commands is available [here](./docs/README.md)**.
+**Ready-to-use documentation for Hestia CLI commands is available [online](https://hestiacp.com/docs/reference/cli.html)**.
 
 If you are here to browse it, you don't need any of the below.
 

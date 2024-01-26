@@ -50,6 +50,10 @@ Generate one-page documentation for Hestia CLI commands, use hestia-cmds.json ca
 ```
 npm run generate-docs -- https://github.com/hestiacp/hestiacp branch-that-contains-formatted-comments
 ```
+or 
+```
+npm run generate-docs -- local '../relative/path/to/hestiacp/cloned files'
+```
 
 ## Format
 

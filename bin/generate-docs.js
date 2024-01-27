@@ -11,3 +11,6 @@ const cmds = processCmds({ hestiaRepo, hestiaBranch, cache: true, checkOldDocs: 
 const allCmdsDoc = generateAllCmdsDoc(cmds);
 
 fs.writeFileSync(path.join(__dirname, '../docs/commands.md'), allCmdsDoc, 'utf8');
+if(hestiaRepo == 'local'){
+  fs.writeFileSync(path.join(hestiaBranch, '/docs/docs/reference/cli.md'), allCmdsDoc, 'utf8');
+}

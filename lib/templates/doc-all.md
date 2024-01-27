@@ -1,5 +1,9 @@
 # CLI Reference
 
+::: info
+Options between square brackets `[` and `]` are optional and not required.
+:::
+
 {% for cmdName, cmd in cmds %}
 ## {{ cmdName }}
 

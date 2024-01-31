@@ -1,7 +1,7 @@
 # CLI Reference
 
 ::: info
-Options between square brackets `[` and `]` are optional and not required.
+Options between square brackets `[` and `]` are optional and not required. For example [FORMAT]
 :::
 
 {% for cmdName, cmd in cmds %}
@@ -15,17 +15,31 @@ Options between square brackets `[` and `]` are optional and not required.
 
 **Options**: {% for option in cmd.options %}{{ '–' if (option === 'NONE') else ('`' + (option | mdCode) + '`') }} {% endfor %}
 
+{% if cmd.variable.length %}
+
+{% for variable in cmd.variable %}
+`{{ variable.name}}` {{ variable.value}}<br />
+{% endfor %}
+{% endif %}
+
 {% if cmd.examples.length %}
 
 **Examples**:
-
-```{{ 'php' if cmd.php else 'bash' }}
 {% for example in cmd.examples %}
+```{{ 'php' if cmd.php else 'bash' }}
 {{ example }}
-{% endfor %}
 ```
+{% endfor %}
+
 {% endif %}
 
 {{ cmd.desc }}
+
+{% if cmd.note %}
+::: warning
+ {{ cmd.note }}
+:::
+
+{% endif %}
 
 {% endfor %}
